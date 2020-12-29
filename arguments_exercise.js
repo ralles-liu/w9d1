@@ -18,6 +18,7 @@ function sumAlt(...nums) {
 }
 
 // console.log(sumAlt(1,2,3,4, 5) === 10);
+console.log(sumAlt(1,2,3,4, 5) === 10);
 
 
 Function.prototype.myBind = function (test) {
@@ -31,4 +32,10 @@ Function.prototype.myBind = function (test) {
         let args2 = Array.from(arguments);
         return func.apply(test, ) // not sure what is supposed to be here
     }
+}
+
+Function.prototype.myBind2 = function (test1, ...bindArgs) {
+    // bindArgs can take in any amount
+    // it should be the same as the previous one
+    
 }
