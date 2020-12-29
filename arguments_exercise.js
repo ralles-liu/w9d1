@@ -37,5 +37,27 @@ Function.prototype.myBind = function (test) {
 Function.prototype.myBind2 = function (test1, ...bindArgs) {
     // bindArgs can take in any amount
     // it should be the same as the previous one
-    
+
+}
+
+
+function curriedSum(numberOfArgs) {
+    // the function needs to wait until the necessary arguments are given
+    // the first element tells you how many elements to take in
+    let arr = [];
+    function _curriedSum(args) {
+        arr.push(args);
+        // if we've pushed neough thing sto the array then we;re good
+        if (arr.length == numberOfArgs) {
+            // this means we have enough arguments to actually start it
+            let sum = 0;
+            for (let i = 0; i < numberOfArgs; i++) {
+                sum += arr[i];
+            }
+        }
+        else {
+            return _curriedSum; // i dont understand how this works why doesn't it retrun something
+        }
+    }
+
 }
