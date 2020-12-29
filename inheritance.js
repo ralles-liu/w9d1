@@ -28,3 +28,8 @@ Function.prototype.inherits = function (parent) {
     this.prototype.constructor = this;
 
 }
+
+
+Function.prototype.inheritsWtihCreate = function(parent) {
+    
+}
