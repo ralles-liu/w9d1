@@ -18,3 +18,17 @@ function sumAlt(...nums) {
 }
 
 // console.log(sumAlt(1,2,3,4, 5) === 10);
+
+
+Function.prototype.myBind = function (test) {
+    let func = this;
+    let args = [];
+    for (let i = 1; i < arguments.length; i++) {
+        args.push(arguments[i]);
+    }
+
+    return function binded() {
+        let args2 = Array.from(arguments);
+        return func.apply(test, ) // not sure what is supposed to be here
+    }
+}
