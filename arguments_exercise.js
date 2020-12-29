@@ -58,6 +58,8 @@ function curriedSum(numberOfArgs) {
         else {
             return _curriedSum; // i dont understand how this works why doesn't it retrun something
         }
+        // doe sthis really work?
+        return _curriedSum;
     }
 
 }
