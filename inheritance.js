@@ -20,3 +20,11 @@
   
 //   liesel.bark();
 //   liesel.sayHello();
+
+Function.prototype.inherits = function (parent) {
+    function surrogate() {}
+    surrogate.prototype = parent.prototype;
+    this.prototype = new surrogate();
+    this.prototype.constructor = this;
+
+}
