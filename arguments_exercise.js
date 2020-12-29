@@ -63,3 +63,18 @@ function curriedSum(numberOfArgs) {
     }
 
 }
+
+
+Function.prototype.curry = function (numArgs) {
+    // similar to what is previous question
+    let arr = [];
+    let func = this;
+    // same exact question only you apply the function instead of just the summing
+    function _curriedFn(arg) {
+        arr.push(arg);
+        if (arr.length == numArgs) {
+            return func(...arr);
+        }
+    }
+    return _curriedSum;
+}
